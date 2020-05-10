@@ -1,11 +1,10 @@
 2048.c
 ======
 
-[![run on repl.it](http://repl.it/badge/github/sadikkuzu/2048.c)](https://repl.it/github/sadikkuzu/2048.c) and
-```
-make 2048
-./2048
-```
+[![run on repl.it](http://repl.it/badge/github/sadikkuzu/2048.c)](https://repl.it/github/sadikkuzu/2048.c) 
+<br/>and then
+
+[![](replit-run.gif)](https://repl.it/github/sadikkuzu/2048.c)
 
 [Spanish](README_es.md)
 
