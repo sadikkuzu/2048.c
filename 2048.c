@@ -374,6 +374,9 @@ int main(int argc, char *argv[]) {
 	if (argc == 2 && strcmp(argv[1],"bluered")==0) {
 		scheme = 2;
 	}
+	if (argc == 2 && strcmp(argv[1],"original")==0) {
+		scheme = 0;
+	}
 
 	printf("\033[?25l\033[2J");
 
@@ -405,6 +408,8 @@ int main(int argc, char *argv[]) {
 			case 106:	// 'j' key
 			case 66:	// down arrow
 				success = moveDown(board);  break;
+			case 109:	// 'm' key
+				success = true;  break;
 			default: success = false;
 		}
 		if (success) {
