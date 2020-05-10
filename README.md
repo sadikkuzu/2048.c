@@ -1,7 +1,11 @@
 2048.c
 ======
 
-[![run on repl.it](http://repl.it/badge/github/mevdschee/2048.c)](https://repl.it/github/mevdschee/2048.c)
+[![run on repl.it](http://repl.it/badge/github/sadikkuzu/2048.c)](https://repl.it/github/sadikkuzu/2048.c) and
+```
+make 2048
+./2048
+```
 
 [Spanish](README_es.md)
 
@@ -22,7 +26,7 @@ Tested on: GNU/Linux, FreeBSD, OpenBSD
 ### Installation
 
 ```
-wget https://raw.githubusercontent.com/mevdschee/2048.c/master/2048.c
+wget https://raw.githubusercontent.com/sadikkuzu/2048.c/master/2048.c
 gcc -o 2048 2048.c
 ./2048
 ```
@@ -32,7 +36,7 @@ gcc -o 2048 2048.c
 The game supports different color schemes. This depends on ANSI support for 88 or 256 colors. If there are not enough colors supported the game will fallback to black and white (still very much playable). For the original color scheme run:
 
 ```
-./2048
+./2048 original
 ```
 For the black-to-white color scheme (requires 256 colors):
 
@@ -52,5 +56,5 @@ Contributions are very welcome. Always run the tests before committing using:
 
 ```
 $ ./2048 test
-All 13 tests executed successfully
+All 14 tests executed successfully
 ```
