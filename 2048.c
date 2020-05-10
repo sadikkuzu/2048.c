@@ -19,7 +19,7 @@
 
 #define SIZE 4
 uint32_t score=0;
-uint8_t scheme=0;
+uint8_t scheme=2;
 
 void getColor(uint8_t value, char *color, size_t length) {
 	uint8_t original[] = {8,255,1,255,2,255,3,255,4,255,5,255,6,255,7,255,9,0,10,0,11,0,12,0,13,0,14,0,255,0,255,0};
