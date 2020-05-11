@@ -41,6 +41,8 @@ void drawBoard(uint8_t board[SIZE][SIZE]) {
 	uint8_t x,y;
 	char color[40], reset[] = "\033[m";
 	printf("\033[H");
+	
+	printf("     ___  ___  ___  ___ \n    |_  ||   || | || . |\n    |  _|| | ||_  || . |\n    |___||___|  |_||___|\n\n");
 
 	printf("2048.c %17d pts\n\n",score);
 
