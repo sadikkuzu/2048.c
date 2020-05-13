@@ -413,6 +413,8 @@ int main(int argc, char *argv[]) {
 				success = moveDown(board);  break;
 			case 109:	// 'm' key
 				success = true;  break;
+			case 110:	// 'n' key
+				rotateBoard(board); drawBoard(board); success = false;  break;
 			default: success = false;
 		}
 		if (success) {
