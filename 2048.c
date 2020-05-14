@@ -80,7 +80,7 @@ void drawBoard(uint8_t board[SIZE][SIZE]) {
 	// printf("        ←,↑,→,↓ or q        \n");
 	// printf("      ←,↑,→,↓ or q or r        \n");
 	printf("           ←,↑,→,↓        \n");
-	printf("          n: rotate       \n");
+	printf("          t: rotate       \n");
 	printf("   q: quit         r: reset\n");
 	printf("\033[A"); // one line up
 }
@@ -413,7 +413,7 @@ int main(int argc, char *argv[]) {
 				success = moveDown(board);  break;
 			case 109:	// 'm' key
 				success = true;  break;
-			case 110:	// 'n' key
+			case 116:	// 't' key
 				rotateBoard(board); drawBoard(board); success = false;  break;
 			default: success = false;
 		}
