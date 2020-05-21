@@ -103,8 +103,8 @@ void drawBoard(uint8_t board[SIZE][SIZE]) {
 	// printf("      ←,↑,→,↓ or q or r        \n");
 	printf("           ←,↑,→,↓        \n");
 	//printf("          t: rotate       \n");
-	printf("  u: ← ← ↓ → → → ↓ ← ← ←  \n");
-	printf("   q: quit         r: reset\n");
+	printf("   u: ← ← ↓ → → → ↓ ← ← ←  \n");
+	printf("   q: quit       r: reset  \n");
 	printf("\033[A"); // one line up
 }
 
