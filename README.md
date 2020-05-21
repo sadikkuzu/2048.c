@@ -1,6 +1,8 @@
 2048.c
 ======
 
+[github.com/sadikkuzu/2048.c](https://github.com/sadikkuzu/2048.c)
+
 [![run on repl.it](http://repl.it/badge/github/sadikkuzu/2048.c)](https://repl.it/github/sadikkuzu/2048.c) 
 <br/>and then
 
