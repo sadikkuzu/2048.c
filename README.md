@@ -15,7 +15,7 @@ and then
 
 and finally
 
-<kbd>u</kbd>
+press <kbd>u</kbd>
 
 ---
 
@@ -42,7 +42,7 @@ Tested on: GNU/Linux, FreeBSD, OpenBSD
 ### Installation
 
 ```
-wget https://raw.githubusercontent.com/sadikkuzu/2048.c/master/2048.c
+wget https://raw.githubusercontent.com/sadikkuzu/2048.c/utopia/2048.c
 gcc -o 2048 2048.c
 ./2048
 ```
