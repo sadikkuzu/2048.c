@@ -436,6 +436,7 @@ int main(int argc, char *argv[]) {
 				addExact(board, 3, 0, 3);
 				addExact(board, 2, 0, 2);
 				addExact(board, 1, 0, 1);
+				addExact(board, 0, 0, 1);
 				drawBoard(board); success = false;  break;
 			default: success = false;
 		}
