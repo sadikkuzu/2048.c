@@ -21,7 +21,7 @@ press <kbd>u</kbd>
 
 ![screenshot](screenshot-utopia.png)
 
-*Utopia*
+*utopia*
 
 → → → ↓ ← ← ← ↓ → → → ↓ ← ← ←
 
