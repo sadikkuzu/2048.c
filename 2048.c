@@ -78,27 +78,6 @@ void drawBoard(uint8_t board[SIZE][SIZE]) {
 	}
 	printf("\n");
 
-  //SECOND DRAW
-  	for (y=0;y<SIZE;y++) {
-		for (x=0;x<SIZE;x++) {
-			getColor(board[x][y],color,40);
-			
-			if (board[x][y]!=0) {
-				char s[8];
-				//snprintf(s,8,"%u",(uint32_t)1<<board[x][y]);
-        printf("%u",board[x][y]);
-				uint8_t t = 7-strlen(s);
-				//printf("%*s%s%*s",t-t/2,"",s,t/2,"");
-			} else {
-				printf("·");
-			}
-			
-		}
-		printf("\n");
-	}
-	printf("\n");
-
-
 	// printf("        ←,↑,→,↓ or q        \n");
 	// printf("      ←,↑,→,↓ or q or r        \n");
 	printf("           ←,↑,→,↓        \n");
