@@ -78,11 +78,8 @@ void drawBoard(uint8_t board[SIZE][SIZE]) {
 	}
 	printf("\n");
 
-	// printf("        ←,↑,→,↓ or q        \n");
-	// printf("      ←,↑,→,↓ or q or r        \n");
-	printf("           ←,↑,→,↓        \n");
-	//printf("          t: rotate       \n");
-	printf("   u: ← ← ↓ → → → ↓ ← ← ←  \n");
+	printf("          ←,↑,→,↓          \n");
+	printf("         u: utopia         \n");
 	printf("   q: quit       r: reset  \n");
 	printf("\033[A"); // one line up
 }
@@ -423,18 +420,22 @@ int main(int argc, char *argv[]) {
 				success = true;  break;
 			case 116:	// 't' key
 				rotateBoard(board); drawBoard(board); success = false;  break;
-      case 117:	// 'u' key
-				addExact(board, 0, 3, 10); 
-				addExact(board, 1, 3, 9);
-				addExact(board, 2, 3, 8);
-				addExact(board, 3, 3, 7);
-				addExact(board, 3, 2, 6);
-				addExact(board, 2, 2, 5);
-				addExact(board, 1, 2, 4);
-				addExact(board, 0, 2, 3);
-				addExact(board, 0, 1, 2);
-				addExact(board, 1, 1, 1);
-				addExact(board, 2, 1, 1);
+			case 117:	// 'u' key for utopia
+				addExact(board, 0, 3, 15); 
+				addExact(board, 1, 3, 14);
+				addExact(board, 2, 3, 13);
+				addExact(board, 3, 3, 12);
+				addExact(board, 3, 2, 11);
+				addExact(board, 2, 2, 10);
+				addExact(board, 1, 2, 9);
+				addExact(board, 0, 2, 8);
+				addExact(board, 0, 1, 7);
+				addExact(board, 1, 1, 6);
+				addExact(board, 2, 1, 5);
+				addExact(board, 3, 1, 4);
+				addExact(board, 3, 0, 3);
+				addExact(board, 2, 0, 2);
+				addExact(board, 1, 0, 1);
 				drawBoard(board); success = false;  break;
 			default: success = false;
 		}
