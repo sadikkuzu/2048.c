@@ -1,7 +1,7 @@
 /*
  ============================================================================
  Name        : 2048.c
- Author      : Maurits van der Schee
+ Authors     : Maurits van der Schee, Sadık Kuzu
  Description : Console version of the game "2048" for GNU/Linux
  ============================================================================
  */
@@ -77,11 +77,34 @@ void drawBoard(uint8_t board[SIZE][SIZE]) {
 		printf("\n");
 	}
 	printf("\n");
+
+  //SECOND DRAW
+  	for (y=0;y<SIZE;y++) {
+		for (x=0;x<SIZE;x++) {
+			getColor(board[x][y],color,40);
+			
+			if (board[x][y]!=0) {
+				char s[8];
+				//snprintf(s,8,"%u",(uint32_t)1<<board[x][y]);
+        printf("%u",board[x][y]);
+				uint8_t t = 7-strlen(s);
+				//printf("%*s%s%*s",t-t/2,"",s,t/2,"");
+			} else {
+				printf("·");
+			}
+			
+		}
+		printf("\n");
+	}
+	printf("\n");
+
+
 	// printf("        ←,↑,→,↓ or q        \n");
 	// printf("      ←,↑,→,↓ or q or r        \n");
 	printf("           ←,↑,→,↓        \n");
-	printf("          t: rotate       \n");
-	printf("   q: quit         r: reset\n");
+	//printf("          t: rotate       \n");
+	printf("   u: ← ← ↓ → → → ↓ ← ← ←  \n");
+	printf("   q: quit       r: reset  \n");
 	printf("\033[A"); // one line up
 }
 
@@ -226,6 +249,7 @@ bool gameEnded(uint8_t board[SIZE][SIZE]) {
 	return ended;
 }
 
+
 void addRandom(uint8_t board[SIZE][SIZE]) {
 	static bool initialized = false;
 	uint8_t x,y;
@@ -254,6 +278,11 @@ void addRandom(uint8_t board[SIZE][SIZE]) {
 		n = (rand()%10)/9+1;
 		board[x][y]=n;
 	}
+}
+
+//TODO
+void addExact(uint8_t board[SIZE][SIZE], int first, int second, uint8_t n) {
+		board[first][second]=n;
 }
 
 void initBoard(uint8_t board[SIZE][SIZE]) {
@@ -415,6 +444,19 @@ int main(int argc, char *argv[]) {
 				success = true;  break;
 			case 116:	// 't' key
 				rotateBoard(board); drawBoard(board); success = false;  break;
+      case 117:	// 'u' key
+				addExact(board, 0, 3, 10); 
+				addExact(board, 1, 3, 9);
+				addExact(board, 2, 3, 8);
+				addExact(board, 3, 3, 7);
+				addExact(board, 3, 2, 6);
+				addExact(board, 2, 2, 5);
+				addExact(board, 1, 2, 4);
+				addExact(board, 0, 2, 3);
+				addExact(board, 0, 1, 2);
+				addExact(board, 1, 1, 1);
+				addExact(board, 2, 1, 1);
+				drawBoard(board); success = false;  break;
 			default: success = false;
 		}
 		if (success) {
