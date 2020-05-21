@@ -452,7 +452,10 @@ int main(int argc, char *argv[]) {
 				addExact(board, 2, 2, 5);
 				addExact(board, 1, 2, 4);
 				addExact(board, 0, 2, 3);
-        drawBoard(board); success = false;  break;
+				addExact(board, 0, 1, 2);
+				addExact(board, 1, 1, 1);
+				addExact(board, 2, 1, 1);
+				drawBoard(board); success = false;  break;
 			default: success = false;
 		}
 		if (success) {
