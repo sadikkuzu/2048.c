@@ -1,7 +1,7 @@
 /*
  ============================================================================
  Name        : 2048.c
- Author      : Maurits van der Schee
+ Authors     : Maurits van der Schee, Sadık Kuzu
  Description : Console version of the game "2048" for GNU/Linux
  ============================================================================
  */
@@ -280,8 +280,8 @@ void addRandom(uint8_t board[SIZE][SIZE]) {
 }
 
 //TODO
-void addExact(uint8_t board[SIZE][SIZE], uint8_t n) {
-		board[SIZE-1][SIZE-1]=n;
+void addExact(uint8_t board[SIZE][SIZE], int first, int second, uint8_t n) {
+		board[first][second]=n;
 }
 
 void initBoard(uint8_t board[SIZE][SIZE]) {
@@ -444,7 +444,15 @@ int main(int argc, char *argv[]) {
 			case 116:	// 't' key
 				rotateBoard(board); drawBoard(board); success = false;  break;
       case 117:	// 'u' key
-				addExact(board, 3); drawBoard(board); success = false;  break;
+				addExact(board, 0, 3, 10); 
+				addExact(board, 1, 3, 9);
+				addExact(board, 2, 3, 8);
+				addExact(board, 3, 3, 7);
+				addExact(board, 3, 2, 6);
+				addExact(board, 2, 2, 5);
+				addExact(board, 1, 2, 4);
+				addExact(board, 0, 2, 3);
+        drawBoard(board); success = false;  break;
 			default: success = false;
 		}
 		if (success) {
