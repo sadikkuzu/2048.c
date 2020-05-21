@@ -13,6 +13,10 @@ and then
 
 [![](replit-run.gif)](https://repl.it/github/sadikkuzu/2048.c)
 
+and finally
+
+<kbd>u</kbd>
+
 ---
 
 ![screenshot](screenshot-utopia.png)
