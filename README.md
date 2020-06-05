@@ -3,6 +3,8 @@
 
 [github.com/sadikkuzu/2048.c](https://github.com/sadikkuzu/2048.c)
 
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+
 ---
 [![run on repl.it](http://repl.it/badge/github/sadikkuzu/2048.c)](https://repl.it/github/sadikkuzu/2048.c) 
 <br/>and
