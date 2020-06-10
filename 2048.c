@@ -261,6 +261,21 @@ void addExact(uint8_t board[SIZE][SIZE], int first, int second, uint8_t n) {
 		board[first][second]=n;
 }
 
+uint8_t max(uint8_t num1, uint8_t num2) {
+	return (num1 > num2 ) ? num1 : num2;
+}
+
+uint8_t noktaAtisi(int x, int y) {
+	return max(1, ( (y*SIZE)+((y%2)*(SIZE-1-x) + ((y+1)%2)*x)  ) );
+}
+
+void utopyala(uint8_t board[SIZE][SIZE]) {
+	uint8_t i,j;
+	for ( i = 0; i < SIZE; i++ )
+		for ( j = 0; j < SIZE; j++ )
+			addExact(board, i, j, noktaAtisi(i,j));
+}
+
 void initBoard(uint8_t board[SIZE][SIZE]) {
 	uint8_t x,y;
 	for (x=0;x<SIZE;x++) {
@@ -421,22 +436,7 @@ int main(int argc, char *argv[]) {
 			case 116:	// 't' key
 				rotateBoard(board); drawBoard(board); success = false;  break;
 			case 117:	// 'u' key for utopia
-				addExact(board, 0, 3, 15); 
-				addExact(board, 1, 3, 14);
-				addExact(board, 2, 3, 13);
-				addExact(board, 3, 3, 12);
-				addExact(board, 3, 2, 11);
-				addExact(board, 2, 2, 10);
-				addExact(board, 1, 2, 9);
-				addExact(board, 0, 2, 8);
-				addExact(board, 0, 1, 7);
-				addExact(board, 1, 1, 6);
-				addExact(board, 2, 1, 5);
-				addExact(board, 3, 1, 4);
-				addExact(board, 3, 0, 3);
-				addExact(board, 2, 0, 2);
-				addExact(board, 1, 0, 1);
-				addExact(board, 0, 0, 1);
+				utopyala(board);
 				drawBoard(board); success = false;  break;
 			default: success = false;
 		}
